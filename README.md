@@ -1,6 +1,6 @@
 <div align="center">
 
-# ARTEMIS
+# 🏹 ARTEMIS
 
 ### Agent-guided Reliability-aware Temporal Mask Evolution for Imperfectly Supervised Video Polyp Segmentation
 
@@ -20,25 +20,25 @@ Guanyu Yang and Yutong Xie are corresponding authors.
 
 </div>
 
-## News
+## 🚀 News
 
 - **[2026/06]** ARTEMIS repository page is initialized for the submission-stage manuscript.
 - **[2026/06]** Code, checkpoints, and prediction maps will be released after acceptance.
 
-## Abstract
+## 📌 Abstract
 
 Imperfectly supervised video polyp segmentation (VPS) aims to learn dense and temporally consistent masks from inexpensive supervision, including weak annotations such as points and scribbles, as well as semi-supervision with only a small subset of densely labeled frames. Although SAM2 can convert sparse or partial annotations into dense masks, direct pseudo labeling remains limited by geometry-degraded masks, underused temporal propagation, and reliability-blind supervision.
 
 We propose **ARTEMIS**, a unified framework for imperfectly supervised VPS driven by **agent-guided reliability-aware temporal mask evolution**. ARTEMIS first initializes coarse masks from available supervision, then uses a debate-and-judge vision-language agent to select reliable temporal anchors under weak supervision. These anchors are propagated bidirectionally with SAM2 to refine unreliable or unlabeled frames. Finally, ARTEMIS trains the segmenter with temporal reliability-aware robust learning, including reliability-guided reference selection, a Reference Prototype Transport Module, and reliability-aware robust loss. Experiments on SUN-SEG and CVC-ClinicDB-612 under scribble, point, and limited-label settings demonstrate state-of-the-art performance.
 
-## Highlights
+## ✨ Highlights
 
 - **Unified imperfect supervision.** ARTEMIS handles weakly supervised and semi-supervised VPS in one complete-then-learn framework.
 - **Agent-guided anchor selection.** A debate-and-judge vision-language agent identifies reliable temporal anchors from noisy SAM2-generated masks.
 - **Bidirectional temporal mask evolution.** Reliable anchors are propagated forward and backward with SAM2 to complete sparse or missing annotations.
 - **Reliability-aware robust learning.** Reliability-guided reference selection, RPTM, and robust loss suppress residual pseudo-label noise while preserving difficult samples.
 
-## Framework Overview
+## 🏗️ Framework Overview
 
 <p align="center">
   <img src="figure/figure_introduction_2.png" alt="ARTEMIS paradigm" width="92%">
@@ -61,33 +61,39 @@ ARTEMIS follows a two-stage pipeline.
 
 <p align="center"><em>Stage 2: Reliable reference identity is transported across frames and noisy supervision is down-weighted.</em></p>
 
-## Main Results
+## 📊 Main Results
 
-We evaluate ARTEMIS on **SUN-SEG** and **CVC-ClinicDB-612** under weakly supervised and semi-supervised settings. The table below reports representative Dice scores. Full quantitative comparisons and ablation studies are provided in the paper.
+We evaluate ARTEMIS on **SUN-SEG** under weakly supervised and semi-supervised settings. The tables below report the complete SUN-SEG results of ARTEMIS across Easy/Hard and Seen/Unseen splits. Full comparisons with competing methods and ablation studies are provided in the paper.
 
-### SUN-SEG Dice Results
+### 🧪 Weakly Supervised SUN-SEG Results
 
-| Supervision Setting | Easy-Seen | Easy-Unseen | Hard-Seen | Hard-Unseen |
-| :--- | ---: | ---: | ---: | ---: |
-| Scribble supervision | **85.2** | **66.7** | **78.8** | **68.7** |
-| Point supervision | **81.2** | **62.8** | **74.8** | **64.4** |
-| 1/8 labeled training data | **86.5** | **68.2** | **80.0** | **70.9** |
-| 1/16 labeled training data | **85.5** | **66.9** | **79.1** | **68.2** |
+| Supervision | Split | Sα↑ | Eφ↑ | Fβ↑ | Dice↑ | IoU↑ | MAE↓ |
+| :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Scribble | Easy-Seen | **89.7** | **92.4** | **84.1** | **85.2** | **78.3** | **3.4** |
+| Scribble | Easy-Unseen | **78.6** | **79.7** | **65.9** | **66.7** | **58.7** | **4.3** |
+| Scribble | Hard-Seen | **84.5** | **87.8** | **77.3** | **78.8** | **71.3** | **7.4** |
+| Scribble | Hard-Unseen | **79.6** | **81.6** | **67.5** | **68.7** | **60.9** | **4.8** |
+| Point | Easy-Seen | **86.3** | **88.7** | **65.4** | **81.2** | **73.2** | **6.8** |
+| Point | Easy-Unseen | **77.0** | **76.9** | **52.9** | **62.8** | **53.9** | **8.0** |
+| Point | Hard-Seen | **81.5** | **84.0** | **59.2** | **74.8** | **66.0** | **10.0** |
+| Point | Hard-Unseen | **77.0** | **78.6** | **52.7** | **64.4** | **55.5** | **8.0** |
 
-<small>All values are Dice scores in percentage (%). Higher is better.</small>
+### 🧬 Semi-supervised SUN-SEG Results
 
-### CVC-ClinicDB-612 Results
-
-| Supervision Setting | S_alpha | E_phi | F_beta | Dice | IoU | MAE |
-| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Scribble supervision | **91.7** | **94.8** | **86.5** | **88.7** | **80.2** | **1.1** |
-| Point supervision | **88.7** | **90.7** | **79.4** | **83.1** | **72.3** | **1.7** |
-| 1/8 labeled training data | **92.8** | **95.2** | **88.2** | **89.6** | **81.7** | **0.8** |
-| 1/16 labeled training data | **90.9** | **92.9** | **85.2** | **84.8** | **76.1** | **1.2** |
+| Supervision | Split | Sα↑ | Eφ↑ | Fβ↑ | Dice↑ | IoU↑ | MAE↓ |
+| :--- | :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1/8 labeled | Easy-Seen | **90.7** | **93.6** | **85.2** | **86.5** | **79.9** | **2.7** |
+| 1/8 labeled | Easy-Unseen | **79.4** | **81.1** | **67.1** | **68.2** | **60.4** | **4.8** |
+| 1/8 labeled | Hard-Seen | **86.2** | **90.1** | **78.2** | **80.0** | **72.2** | **4.5** |
+| 1/8 labeled | Hard-Unseen | **80.8** | **83.9** | **69.4** | **70.9** | **63.1** | **4.6** |
+| 1/16 labeled | Easy-Seen | **89.9** | **92.4** | **84.3** | **85.5** | **78.9** | **3.4** |
+| 1/16 labeled | Easy-Unseen | **78.3** | **79.8** | **66.0** | **66.9** | **58.9** | **4.9** |
+| 1/16 labeled | Hard-Seen | **84.5** | **87.9** | **77.4** | **79.1** | **71.5** | **7.6** |
+| 1/16 labeled | Hard-Unseen | **79.2** | **81.4** | **67.1** | **68.2** | **60.2** | **5.0** |
 
 <small>All values are percentages (%). Higher is better except MAE.</small>
 
-## Qualitative Results
+## 🖼️ Qualitative Results
 
 <p align="center">
   <img src="figure/figure_qualitative_compairson_scribble.png" alt="Qualitative comparison under scribble supervision" width="96%">
@@ -101,13 +107,13 @@ We evaluate ARTEMIS on **SUN-SEG** and **CVC-ClinicDB-612** under weakly supervi
 
 <p align="center"><em>Qualitative comparison under the 1/8 labeled training data setting. ARTEMIS reduces over-segmentation and under-segmentation for background-like polyps.</em></p>
 
-## Code and Resources
+## 🛠️ Code and Resources
 
 This repository is currently maintained for the submission-stage manuscript. Source code, training and testing scripts, checkpoints, and prediction maps are not released during peer review.
 
 The full code and additional resources will be made available after acceptance.
 
-## Citation
+## 📖 Citation
 
 If you find ARTEMIS useful, please consider citing our work. The BibTeX entry will be updated with the official venue or preprint information when it becomes available.
 
@@ -120,10 +126,6 @@ If you find ARTEMIS useful, please consider citing our work. The BibTeX entry wi
 }
 ```
 
-## Acknowledgement
-
-Tong Wang, Yaolei Qi, and Guanyu Yang are supported by the National Natural Science Foundation of China (T2541064, 82441021) and the Jiangsu Province Cutting-edge Technology R&D Program (BF2025628). This work is also supported by the Big Data Computing Center of Southeast University.
-
-## Contact
+## 📬 Contact
 
 For questions about the paper or future code release, please contact [tongwangnj@qq.com](mailto:tongwangnj@qq.com).
