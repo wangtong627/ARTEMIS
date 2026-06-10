@@ -13,8 +13,9 @@ Guanyu Yang and Yutong Xie are corresponding authors.
 
 <p>
   <a href="#"><img src="https://img.shields.io/badge/Paper-Submission_Stage-lightgrey" alt="Paper"></a>
-  <a href="#code-and-resources"><img src="https://img.shields.io/badge/Code-Coming_Soon-blue" alt="Code"></a>
-  <a href="#citation"><img src="https://img.shields.io/badge/BibTeX-Available-green" alt="BibTeX"></a>
+  <a href="#-download-resources"><img src="https://img.shields.io/badge/Resources-OneDrive-blue" alt="Resources"></a>
+  <a href="#-code-status"><img src="https://img.shields.io/badge/Code-Coming_Soon-lightgrey" alt="Code"></a>
+  <a href="#-citation"><img src="https://img.shields.io/badge/BibTeX-Available-green" alt="BibTeX"></a>
   <a href="#"><img src="https://img.shields.io/badge/Task-Video_Polyp_Segmentation-purple" alt="Task"></a>
 </p>
 
@@ -22,8 +23,8 @@ Guanyu Yang and Yutong Xie are corresponding authors.
 
 ## 🚀 News
 
+- **[2026/06]** Pseudo-label data, prediction maps, and model snapshots are released for reproducibility.
 - **[2026/06]** ARTEMIS repository page is initialized for the submission-stage manuscript.
-- **[2026/06]** Code, checkpoints, and prediction maps will be released after acceptance.
 
 ## 📌 Abstract
 
@@ -107,11 +108,48 @@ We evaluate ARTEMIS on **SUN-SEG** under weakly supervised and semi-supervised s
 
 <p align="center"><em>Qualitative comparison under the 1/8 labeled training data setting. ARTEMIS reduces over-segmentation and under-segmentation for background-like polyps.</em></p>
 
-## 🛠️ Code and Resources
+## 📂 Download Resources
 
-This repository is currently maintained for the submission-stage manuscript. Source code, training and testing scripts, checkpoints, and prediction maps are not released during peer review.
+We provide the processed pseudo-label data, prediction maps, and trained model snapshots via OneDrive. These resources are released for reproducibility and comparison while the source code remains unavailable during peer review.
 
-The full code and additional resources will be made available after acceptance.
+### 🗂️ Dataset and Pseudo Labels
+
+| Resource | Description | Link |
+| :--- | :--- | :---: |
+| Dataset | Dataset package used by ARTEMIS experiments | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgBoQdoKNmJGS5EWRMYgPYErAcjPfrxMmQp6na-_IGPOrSM?e=i3WAMp) |
+| Scribble / Point | Weak annotation files | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBRS-IF7-hyTZRRExwSg7h3ASnV7u0DpEX2zUd2DrbCs9w?e=he9J8M) |
+| Point2Mask | Coarse masks generated from point prompts | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQAxGte0XaGMRY28NshQtk7rAdz_G4WFJsqrRIjOMOAmoBA?e=H96gMt) |
+| Mask2Mask Forward | Forward-evolved pseudo masks | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQDW9JkRz9onSrhLLGRSQpWVAU3dBa9-ZqU7EgCuOOMlswI?e=J2pST5) |
+| Mask2Mask Forward Logit | Forward propagation logits | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQAeO1beBa_tS4p0DCF3KSC0Afrw8Nu2hQtbAx_NNFN3jh8?e=fC338x) |
+| Mask2Mask Backward | Backward-evolved pseudo masks | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQCfPeF9oNxBRIJ1Myt0plGLAQNJCMcqMV6AXmAnSeTXxDY?e=aEH6f6) |
+| Mask2Mask Backward Logit | Backward propagation logits | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQDpacdRxwYNRauOLwpM-R5YAfU9UO4dk7e-oQV6-Kg5twk?e=r54sd5) |
+| Reliable Reference Cache | Cached reliability-guided reference information | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQA5GKybOWTzRYgVzP60eso1AVVQ5yCwhX-_d3ypcFY7F7Y?e=bMKTe1) |
+
+### 🖼️ Prediction Maps
+
+| Resource | Link |
+| :--- | :---: |
+| All Predictions | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgBl-oYdEy1RSbNIv9KSQ4PsATq2os23Z7YKPGvKXE7dPPo?e=TybeCf) |
+| ARTEMIS Scribble Predictions | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQBlkjlYi3ATTbKN_LC5rg7HAVxkk-LyDaQCJlWwo0LYEWI?e=JkMHSd) |
+| ARTEMIS Point Predictions | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQC9osl2UFu_Tok1xL9xwIcPASDnp7Mmf8Gdye_dm8LspV0?e=OP8QZx) |
+| ARTEMIS 1/8 Data Predictions | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQA0nrh71c6LTYIQ_m8AkUouAZnABym0j9pbdZyKf812rKE?e=DOZVnK) |
+| ARTEMIS 1/16 Data Predictions | [Download](https://mbzuaiac-my.sharepoint.com/:u:/g/personal/tong_wang_mbzuai_ac_ae/IQDMnmI8lu0JQ4rX1M0TyYmGAZ5O5N1j9WgfYEYOk_HwHl4?e=o7etgt) |
+
+### 🧩 Model Snapshots
+
+| Resource | Link |
+| :--- | :---: |
+| All Snapshots | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgBJwNJAn3wfRJiyBlIkQASzARZZUPRDehg9YxbOzsqRiWM?e=JQhaYw) |
+| ARTEMIS Scribble Snapshot | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgDYwh9JOWoRQJrVrjI51n28AcXSO0bFMHTdxuCnkMci6hw?e=0cbeHu) |
+| ARTEMIS Point Snapshot | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgB6C6Jvqgw_Q7oVpcNhk4lXAZo4wjE0N7WncOkVGRM7g50?e=TroNnH) |
+| ARTEMIS 1/8 Data Snapshot | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgB7XyoBxl1dTqqDes9n_faQAcuyTW_0BKCyG43e1ibFlic?e=k2BnVI) |
+| ARTEMIS 1/16 Data Snapshot | [Download](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/tong_wang_mbzuai_ac_ae/IgAzyScT5MatQbG4bp-ui7KMAfJT-xr44YJ-ZdQIIOWwlGs?e=VHbe9d) |
+
+## 🛠️ Code Status
+
+This repository is currently maintained for the submission-stage manuscript. Source code, training scripts, and testing scripts are not released during peer review.
+
+The full code will be made available after acceptance.
 
 ## 📖 Citation
 
