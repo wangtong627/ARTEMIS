@@ -4,12 +4,13 @@
 
 ### Agent-guided Reliability-aware Temporal Mask Evolution for Imperfectly Supervised Video Polyp Segmentation
 
-Tong Wang<sup>1,2</sup>, Siwen Wang<sup>2</sup>, Yaolei Qi<sup>1</sup>, Jinxing Zhou<sup>2</sup>, Guanyu Yang<sup>1</sup>, Yutong Xie<sup>2</sup>
+Tong Wang<sup>1,2</sup>, Siwen Wang<sup>2</sup>, Yaolei Qi<sup>1</sup>, Jinxing Zhou<sup>2</sup>, Yuting He<sup>3</sup>, Guanyu Yang<sup>1</sup>, Yutong Xie<sup>2</sup>
 
 <sup>1</sup> Southeast University, China  
-<sup>2</sup> Mohamed bin Zayed University of Artificial Intelligence, UAE
+<sup>2</sup> Mohamed bin Zayed University of Artificial Intelligence, UAE  
+<sup>3</sup> Case Western Reserve University, USA
 
-Guanyu Yang and Yutong Xie are corresponding authors.
+Guanyu Yang and Yutong Xie are corresponding authors. Work was done when Tong Wang was visiting MBZUAI.
 
 <p>
   <a href="#"><img src="https://img.shields.io/badge/Paper-Submission_Stage-lightgrey" alt="Paper"></a>
@@ -158,7 +159,7 @@ If you find ARTEMIS useful, please consider citing our work. The BibTeX entry wi
 ```bibtex
 @article{wang2026artemis,
   title={ARTEMIS: Agent-guided Reliability-aware Temporal Mask Evolution for Imperfectly Supervised Video Polyp Segmentation},
-  author={Wang, Tong and Wang, Siwen and Qi, Yaolei and Zhou, Jinxing and Yang, Guanyu and Xie, Yutong},
+  author={Wang, Tong and Wang, Siwen and Qi, Yaolei and Zhou, Jinxing and He, Yuting and Yang, Guanyu and Xie, Yutong},
   journal={Under review},
   year={2026}
 }
