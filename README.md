@@ -58,7 +58,7 @@ ARTEMIS follows a two-stage pipeline.
 <p align="center"><em>Stage 1: Reliable temporal anchors are selected and propagated bidirectionally to evolve pseudo masks.</em></p>
 
 <p align="center">
-  <img src="figure/figure_method_stage_2.png" alt="Stage 2: Temporal reliability-aware robust learning" width="96%">
+  <img src="figure/figure_method_stage_2.png?v=20260618-compressed" alt="Stage 2: Temporal reliability-aware robust learning" width="96%">
 </p>
 
 <p align="center"><em>Stage 2: Reliable reference identity is transported across frames and noisy supervision is down-weighted.</em></p>
