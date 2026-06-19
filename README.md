@@ -13,7 +13,7 @@ Tong Wang<sup>1,2</sup>, Siwen Wang<sup>2</sup>, Yaolei Qi<sup>1</sup>, Jinxing 
 Guanyu Yang and Yutong Xie are corresponding authors. Work was done when Tong Wang was visiting MBZUAI.
 
 <p>
-  <a href="#"><img src="https://img.shields.io/badge/Paper-Submission_Stage-lightgrey" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2606.20161"><img src="https://img.shields.io/badge/arXiv-2606.20161-b31b1b.svg" alt="arXiv"></a>
   <a href="#-download-resources"><img src="https://img.shields.io/badge/Resources-OneDrive-blue" alt="Resources"></a>
   <a href="#-code-status"><img src="https://img.shields.io/badge/Code-Coming_Soon-lightgrey" alt="Code"></a>
   <a href="#-citation"><img src="https://img.shields.io/badge/BibTeX-Available-green" alt="BibTeX"></a>
@@ -24,6 +24,7 @@ Guanyu Yang and Yutong Xie are corresponding authors. Work was done when Tong Wa
 
 ## 🚀 News
 
+- **[2026/06]** ARTEMIS is now available on [arXiv](https://arxiv.org/abs/2606.20161).
 - **[2026/06]** Pseudo-label data, prediction maps, and model snapshots are released for reproducibility.
 - **[2026/06]** ARTEMIS repository page is initialized for the submission-stage manuscript.
 
@@ -154,14 +155,17 @@ The full code will be made available after acceptance.
 
 ## 📖 Citation
 
-If you find ARTEMIS useful, please consider citing our work. The BibTeX entry will be updated with the official venue or preprint information when it becomes available.
+If you find ARTEMIS useful, please consider citing our work.
 
 ```bibtex
-@article{wang2026artemis,
+@misc{wang2026artemisagentguidedreliabilityawaretemporal,
   title={ARTEMIS: Agent-guided Reliability-aware Temporal Mask Evolution for Imperfectly Supervised Video Polyp Segmentation},
-  author={Wang, Tong and Wang, Siwen and Qi, Yaolei and Zhou, Jinxing and He, Yuting and Yang, Guanyu and Xie, Yutong},
-  journal={Under review},
-  year={2026}
+  author={Tong Wang and Siwen Wang and Yaolei Qi and Jinxing Zhou and Yuting He and Guanyu Yang and Yutong Xie},
+  year={2026},
+  eprint={2606.20161},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2606.20161},
 }
 ```
 
