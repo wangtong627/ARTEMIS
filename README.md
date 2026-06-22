@@ -158,14 +158,11 @@ The full code will be made available after acceptance.
 If you find ARTEMIS useful, please consider citing our work.
 
 ```bibtex
-@misc{wang2026artemisagentguidedreliabilityawaretemporal,
+@article{wang2026artemis,
   title={ARTEMIS: Agent-guided Reliability-aware Temporal Mask Evolution for Imperfectly Supervised Video Polyp Segmentation},
-  author={Tong Wang and Siwen Wang and Yaolei Qi and Jinxing Zhou and Yuting He and Guanyu Yang and Yutong Xie},
-  year={2026},
-  eprint={2606.20161},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2606.20161},
+  author={Wang, Tong and Wang, Siwen and Qi, Yaolei and Zhou, Jinxing and He, Yuting and Yang, Guanyu and Xie, Yutong},
+  journal={arXiv preprint arXiv:2606.20161},
+  year={2026}
 }
 ```
 
